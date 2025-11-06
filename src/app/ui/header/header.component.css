@@ -1,0 +1,32 @@
+header {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--gray-400);
+}
+
+header > nav > ul {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--gray-900);
+}
+
+header > a {
+  font-weight: 900;
+}
+
+header > nav a::before {
+  content: "< ";
+  color: var(--gray-500);
+}
+
+header > nav a::after {
+  content: " >";
+  color: var(--gray-500);
+}
