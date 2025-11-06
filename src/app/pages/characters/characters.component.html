@@ -1,1 +1,7 @@
-<p>characters works!</p>
+<ul class="characters">
+  @for (character of characters; track character.id) {
+    <li>
+      <app-character-card [character]="character"></app-character-card>
+    </li>
+  }
+</ul>
