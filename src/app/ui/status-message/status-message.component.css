@@ -1,0 +1,6 @@
+p {
+  border: 1px dotted var(--gray-900);
+  text-align: center;
+  padding: 24px 24px;
+  background-color: var(--gray-200);
+}

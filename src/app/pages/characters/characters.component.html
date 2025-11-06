@@ -1,7 +1,15 @@
-<ul class="characters">
-  @for (character of characters; track character.id) {
-    <li>
-      <app-character-card [character]="character"></app-character-card>
-    </li>
-  }
-</ul>
+@if (isLoading) {
+  <app-status-message [message]="messageStatus"></app-status-message>
+} @else if (messageStatus) {
+  <app-status-message [message]="messageStatus"></app-status-message>
+} @else if (!characters.length) {
+  <app-status-message message="No characters in databases"></app-status-message>
+} @else {
+  <ul class="characters">
+    @for (character of characters; track character.id) {
+      <li>
+        <app-character-card [character]="character"></app-character-card>
+      </li>
+    }
+  </ul>
+}
